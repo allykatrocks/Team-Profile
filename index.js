@@ -28,6 +28,13 @@ inquirer.prompt([
         type: "input",
         name: "office number",
         message: "What is the office number?"
+    },
+    {
+        type: "list",
+        name: "team",
+        message: "Add engineer, intern, or finish building team.",
+        choices: ["Engineer", "Intern", "Finish building team"]
+
     }
 ]).then((response) => {
     console.log(response);
