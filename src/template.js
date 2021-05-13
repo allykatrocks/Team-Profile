@@ -14,29 +14,42 @@ function generateHtmlWrapper(office) {
     <header>
     <h1>Our Office Team</h2>
     </header>
-    <div class="row">
+    <div class="col-sm-9" id="cards">
+    <div class="card">
+    <div class="card-body">
     <div id = "employee-card"> 
     <h1>Alex</h1>
     <h2><a href="beatles101@cox.net">beatles101@cox.net</a></h2>
     <h2><a href="https://github.com/allykatrocks">GitHub</a></h2>
     </div>
+    </div>
+    ${
+        office.map(employee => {
+            return `<div class="card">
+            <div class="card-body">
+            <div id="manager-card"> 
+            <h1>${employee.name}</h1>
+            <h2><a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            </div>
+            </div>`
+        }).join("") 
+    }
+    
    
-    <div id = "manager-card"> 
+    <div id="intern-card"> 
+    <div class="card-body">
     <h1>Alex</h1>
     <h2><a href="beatles101@cox.net">beatles101@cox.net</a></h2>
     <h2><a href="https://github.com/allykatrocks">GitHub</a></h2>
     </div>
-   
-    <div id = "intern-card"> 
-    <h1>Alex</h1>
-    <h2><a href="beatles101@cox.net">beatles101@cox.net</a></h2>
-    <h2><a href="https://github.com/allykatrocks">GitHub</a></h2>
     </div>
     
-    <div id = "engineer-card"> 
+    <div id="engineer-card"> 
+    <div class="card-body">
     <h1>Alex</h1>
     <h2><a href="beatles101@cox.net">beatles101@cox.net</a></h2>
     <h2><a href="https://github.com/allykatrocks">GitHub</a></h2>
+    </div>
     </div>
     </div>
     </body>
