@@ -25,13 +25,16 @@ function generateHtmlWrapper(office) {
     </div>
     ${
         office.map(employee => {
-            return `<div class="card">
+            if(employee.getRole === 'Manager') {
+                return `<div class="card">
             <div class="card-body">
             <div id="manager-card"> 
             <h1>${employee.name}</h1>
             <h2><a href="mailto: ${employee.email}">${employee.email}</a></h2>
             </div>
             </div>`
+            }
+            
         }).join("") 
     }
     
