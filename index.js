@@ -2,6 +2,8 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const htmlOutput = require("./src/template");
 const Manager = require("./lib/Manager.js");
+const Engineer = require("./lib/Engineer.js");
+const Intern = require("./lib/Intern.js");
 
 function writeHtml(cards) {
     fs.writeFileSync("./dist/office.html", htmlOutput(cards), "utf-8");
@@ -40,7 +42,7 @@ function addEngineer() {
     
         }
     ]).then((response) => {
-        const engineer = {"name": response.name, "id": response.id, "email": response.email, "github": response.github, "role": "engineer"}
+        const engineer = new Engineer(response.name, response.id, response.email, response.github)
         office.push(engineer);
         if(response.team === "Engineer") {
             addEngineer();
@@ -82,7 +84,7 @@ function addIntern() {
     
         }
     ]).then((response) => {
-        const intern = {"name": response.name, "id": response.id, "email": response.email, "school": response.school, "role": "intern"}
+        const intern = new Intern(response.name, response.id, response.email, response.school)
         office.push(intern);
         if(response.team === "Engineer") {
             addEngineer();

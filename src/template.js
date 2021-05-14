@@ -14,15 +14,7 @@ function generateHtmlWrapper(office) {
     <header>
     <h1>Our Office Team</h2>
     </header>
-    <div class="col-sm-9" id="cards">
-    <div class="card">
-    <div class="card-body">
-    <div id = "employee-card"> 
-    <h1>Alex</h1>
-    <h2><a href="beatles101@cox.net">beatles101@cox.net</a></h2>
-    <h2><a href="https://github.com/allykatrocks">GitHub</a></h2>
-    </div>
-    </div>
+   
     ${
         office.map(employee => {
             if(employee.getRole === 'Manager') {
@@ -30,7 +22,9 @@ function generateHtmlWrapper(office) {
             <div class="card-body">
             <div id="manager-card"> 
             <h1>${employee.name}</h1>
-            <h2><a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            <h2>ID: ${employee.id}</h2>
+            <h2>Email:<a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            <h2>Office Number: ${employee.officeNumber}</h2>
             </div>
             </div>`
             }
@@ -39,22 +33,40 @@ function generateHtmlWrapper(office) {
     }
     
    
-    <div id="intern-card"> 
-    <div class="card-body">
-    <h1>Alex</h1>
-    <h2><a href="beatles101@cox.net">beatles101@cox.net</a></h2>
-    <h2><a href="https://github.com/allykatrocks">GitHub</a></h2>
-    </div>
-    </div>
+    ${
+        office.map(employee => {
+            if(employee.getRole === 'Engineer') {
+                return `<div class="card">
+            <div class="card-body">
+            <div id="engineer-card"> 
+            <h1>${employee.name}</h1>
+            <h2>ID: ${employee.id}</h2>
+            <h2>Email:<a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            <h2>GitHub: <a href="${employee.github}">${employee.github}</a></h2>
+            </div>
+            </div>`
+            }
+            
+        }).join("") 
+    }
     
-    <div id="engineer-card"> 
-    <div class="card-body">
-    <h1>Alex</h1>
-    <h2><a href="beatles101@cox.net">beatles101@cox.net</a></h2>
-    <h2><a href="https://github.com/allykatrocks">GitHub</a></h2>
-    </div>
-    </div>
-    </div>
+    ${
+        office.map(employee => {
+            if(employee.getRole === 'Intern') {
+                return `<div class="card">
+            <div class="card-body">
+            <div id="intern-card"> 
+            <h1>${employee.name}</h1>
+            <h2>ID: ${employee.id}</h2>
+            <h2>Email:<a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            <h2>School: ${employee.school}</h2>
+            </div>
+            </div>`
+            }
+            
+        }).join("") 
+    }
+    
     </body>
     </html>`
     return htmlWrapper;
