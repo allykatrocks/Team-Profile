@@ -17,7 +17,7 @@ function generateHtmlWrapper(office) {
    
     ${
         office.map(employee => {
-            if(employee.getRole === 'Manager') {
+            if(employee.getRole() === 'Manager') {
                 return `<div class="card">
             <div class="card-body">
             <div id="manager-card"> 
@@ -35,7 +35,7 @@ function generateHtmlWrapper(office) {
    
     ${
         office.map(employee => {
-            if(employee.getRole === 'Engineer') {
+            if(employee.getRole() === 'Engineer') {
                 return `<div class="card">
             <div class="card-body">
             <div id="engineer-card"> 
@@ -52,7 +52,7 @@ function generateHtmlWrapper(office) {
     
     ${
         office.map(employee => {
-            if(employee.getRole === 'Intern') {
+            if(employee.getRole() === 'Intern') {
                 return `<div class="card">
             <div class="card-body">
             <div id="intern-card"> 
