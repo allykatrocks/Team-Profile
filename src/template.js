@@ -22,9 +22,11 @@ function generateHtmlWrapper(office) {
             <div class="card-body">
             <div id="manager-card"> 
             <h1>${employee.name}</h1>
+            <h2>${employee.getRole()}</h2>
             <h2>ID: ${employee.id}</h2>
             <h2>Email:<a href="mailto:${employee.email}">${employee.email}</a></h2>
             <h2>Office Number: ${employee.officeNumber}</h2>
+            </div>
             </div>
             </div>`
             }
@@ -40,9 +42,11 @@ function generateHtmlWrapper(office) {
             <div class="card-body">
             <div id="engineer-card"> 
             <h1>${employee.name}</h1>
+            <h2>${employee.getRole()}</h2>
             <h2>ID: ${employee.id}</h2>
             <h2>Email:<a href="mailto:${employee.email}">${employee.email}</a></h2>
             <h2>GitHub: <a href="${employee.github}">${employee.github}</a></h2>
+            </div>
             </div>
             </div>`
             }
@@ -57,9 +61,11 @@ function generateHtmlWrapper(office) {
             <div class="card-body">
             <div id="intern-card"> 
             <h1>${employee.name}</h1>
+            <h2>${employee.getRole()}</h2>
             <h2>ID: ${employee.id}</h2>
             <h2>Email:<a href="mailto:${employee.email}">${employee.email}</a></h2>
             <h2>School: ${employee.school}</h2>
+            </div>
             </div>
             </div>`
             }

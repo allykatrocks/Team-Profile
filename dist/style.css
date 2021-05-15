@@ -7,15 +7,20 @@ header {
     background-color: palegoldenrod;
 }
 
+.card h1 {
+    background-color: crimson;
+}
+
 h2 {
     font-size: 25px;
 }
 
 .employee-cards {
+    display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
+
 .card {
     background-color: palegoldenrod;
-    max-width: 200px;
-    flex-direction: row;
 }
