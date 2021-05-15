@@ -14,7 +14,7 @@ function generateHtmlWrapper(office) {
     <header>
     <h1>Our Office Team</h2>
     </header>
-   
+    <div class="employee-cards">
     ${
         office.map(employee => {
             if(employee.getRole() === 'Manager') {
@@ -23,7 +23,7 @@ function generateHtmlWrapper(office) {
             <div id="manager-card"> 
             <h1>${employee.name}</h1>
             <h2>ID: ${employee.id}</h2>
-            <h2>Email:<a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            <h2>Email:<a href="mailto:${employee.email}">${employee.email}</a></h2>
             <h2>Office Number: ${employee.officeNumber}</h2>
             </div>
             </div>`
@@ -41,7 +41,7 @@ function generateHtmlWrapper(office) {
             <div id="engineer-card"> 
             <h1>${employee.name}</h1>
             <h2>ID: ${employee.id}</h2>
-            <h2>Email:<a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            <h2>Email:<a href="mailto:${employee.email}">${employee.email}</a></h2>
             <h2>GitHub: <a href="${employee.github}">${employee.github}</a></h2>
             </div>
             </div>`
@@ -58,7 +58,7 @@ function generateHtmlWrapper(office) {
             <div id="intern-card"> 
             <h1>${employee.name}</h1>
             <h2>ID: ${employee.id}</h2>
-            <h2>Email:<a href="mailto: ${employee.email}">${employee.email}</a></h2>
+            <h2>Email:<a href="mailto:${employee.email}">${employee.email}</a></h2>
             <h2>School: ${employee.school}</h2>
             </div>
             </div>`
@@ -66,7 +66,7 @@ function generateHtmlWrapper(office) {
             
         }).join("") 
     }
-    
+    </div>
     </body>
     </html>`
     return htmlWrapper;

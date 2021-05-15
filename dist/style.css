@@ -1,0 +1,21 @@
+body {
+    background-color: coral;
+}
+
+header {
+    text-align: center;
+    background-color: palegoldenrod;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.employee-cards {
+    flex-direction: row;
+}
+.card {
+    background-color: palegoldenrod;
+    max-width: 200px;
+    flex-direction: row;
+}

@@ -6,7 +6,7 @@ test('should return an object', () => {
     expect(typeof(e)).toBe("object");
 });
 
-test('should return employee github', () => {
+test('should return engineer github', () => {
     const engineer = new Engineer("Alex", 12, "beatles101@cox.net", "https://github.com/allykatrocks")
     expect(engineer.getGithub()).toEqual("https://github.com/allykatrocks");
 });
