@@ -1,9 +1,11 @@
-# homework-team-profile
+## Team-Rrofile
 
-Objective:
+## Objective:
+
 To generate a webpage that displays an office team's basic info for quick access by a manager.
 
-Requirements:
+## Requirements:
+
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for my team members and their information
 THEN an HTML file is generated that displays a nicely formatted team roster based on user input
@@ -21,6 +23,8 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
+
+## Screenshots
 
 Sample HTML:
 [Sample HTML](./images/samplehtml.png)
